@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import Link from "next/link";
 
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -56,12 +57,12 @@ export default function Hero() {
           Where culinary passion meets tradition. Experience extraordinary flavors in an atmosphere of refined elegance.
         </p>
         <div className="hero-text flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-          <a href="#menu" className="w-full sm:w-auto bg-amber-700 hover:bg-amber-600 text-white px-8 py-4 rounded-full text-lg font-medium transition-colors duration-300">
+          <Link href="/menu" className="w-full sm:w-auto bg-amber-700 hover:bg-amber-600 text-white px-8 py-4 rounded-full text-lg font-medium transition-colors duration-300">
             View Menu
-          </a>
-          <a href="#contact" className="w-full sm:w-auto bg-transparent border border-white text-white hover:bg-white hover:text-stone-900 px-8 py-4 rounded-full text-lg font-medium transition-colors duration-300">
+          </Link>
+          <Link href="/contact" className="w-full sm:w-auto bg-transparent border border-white text-white hover:bg-white hover:text-stone-900 px-8 py-4 rounded-full text-lg font-medium transition-colors duration-300">
             Book a Table
-          </a>
+          </Link>
         </div>
       </div>
     </section>

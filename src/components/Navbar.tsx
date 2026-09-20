@@ -32,10 +32,10 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Menu", href: "#menu" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Menu", href: "/menu" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -54,13 +54,13 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
                 className="text-gray-700 hover:text-amber-700 px-3 py-2 text-sm font-medium transition-colors"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             <button className="bg-amber-800 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-amber-900 transition-colors">
               Book a Table
@@ -84,14 +84,14 @@ export default function Navbar() {
         <div className="md:hidden bg-white border-b border-gray-100 absolute w-full left-0 top-20 shadow-lg">
           <div ref={linksRef} className="px-4 pt-2 pb-6 space-y-2">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
                 className="block px-3 py-3 text-base font-medium text-gray-800 hover:text-amber-800 hover:bg-amber-50 rounded-md"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             <div className="px-3 pt-4">
               <button className="w-full bg-amber-800 text-white px-6 py-3 rounded-md text-base font-medium hover:bg-amber-900 transition-colors">
